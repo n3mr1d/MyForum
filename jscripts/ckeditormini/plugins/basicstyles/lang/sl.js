@@ -1,0 +1,2 @@
+﻿
+CKEDITOR.plugins.setLang('basicstyles','sl',{bold:'Krepko',italic:'Ležeče',strike:'Prečrtano',subscript:'Podpisano',superscript:'Nadpisano',underline:'Podčrtano'});

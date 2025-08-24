@@ -1,0 +1,2 @@
+﻿
+CKEDITOR.plugins.setLang('list','en',{bulletedlist:'Insert/Remove Bulleted List',numberedlist:'Insert/Remove Numbered List',enterlistitem:'Enter a list item. Click cancel or leave blank to end the list.'});

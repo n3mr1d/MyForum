@@ -1,0 +1,1 @@
+CKEDITOR.plugins.add('myoptions',{icons:'myoptions',lang:'en,fa',init:function(editor){editor.addCommand('myoptions',new CKEDITOR.dialogCommand('myoptionsDialog'));editor.ui.addButton('MyOptions',{label:editor.lang.myoptions.title,command:'myoptions'});CKEDITOR.dialog.add('myoptionsDialog',this.path+'dialogs/myoptions.js');}});

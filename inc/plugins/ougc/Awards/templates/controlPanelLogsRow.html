@@ -1,0 +1,19 @@
+<tr>
+    <td class="{$alternativeBackground}">{$userName}</td>
+    <td class="{$alternativeBackground}">{$logGrantAwards}</td>
+    <td class="{$alternativeBackground}">{$logRevokeAwards}</td>
+    <td class="{$alternativeBackground}">{$logDate}</td>
+    <td class="{$alternativeBackground}" align="center">
+        <form action="{$formUrl}" method="post">
+            <input type="hidden" name="action" value="taskLogs"/>
+            <input type="hidden" name="taskID" value="{$taskID}"/>
+            <input type="hidden" name="logID" value="{$logID}"/>
+            <input type="hidden" name="my_post_key" value="{$mybb->post_code}"/>
+            <input type="submit" class="button" value="{$lang->ougcAwardsControlPanelLogsTableOptionsDeleteLog}"/>
+        </form>
+    </td>
+    <td class="{$alternativeBackground}" align="center">
+        <input type="checkbox" name="taskLogs[{$logID}]" value="1" class="checkbox" {$checkedElement}
+               form="controlPanelTaskLogs"/>
+    </td>
+</tr>

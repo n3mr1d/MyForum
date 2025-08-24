@@ -1,0 +1,134 @@
+
+.thread_status {
+	background: none !important;
+	width: 16px;
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	height: 16px;
+	
+	font-size: 22px;
+}
+
+/* Normal thread (ada post kamu) */
+.thread_status.dot_folder::before {
+  font-family: "Font Awesome 6 Free";
+  font-weight: 900;
+  content: "\f075"; /* fa-comments */
+  color: #3b82f6; /* biru */
+}
+
+/* Hot thread (ada post kamu) */
+.thread_status.dot_hotfolder::before {
+  font-family: "Font Awesome 6 Free";
+  font-weight: 900;
+  content: "\f06d"; /* fa-fire */
+  color: #ef4444; /* merah */
+}
+
+/* Hot closed thread (ada post kamu) */
+.thread_status.dot_hotclosefolder::before {
+  font-family: "Font Awesome 6 Free";
+  font-weight: 900;
+  content: "\f023"; /* fa-lock */
+  color: #ef4444;
+}
+
+/* Closed thread (ada post kamu) */
+.thread_status.dot_closefolder::before {
+  font-family: "Font Awesome 6 Free";
+  font-weight: 900;
+  content: "\f023"; /* fa-lock */
+  color: #9ca3af; /* abu */
+}
+
+/* New thread (ada post kamu) */
+.thread_status.dot_newfolder::before {
+  font-family: "Font Awesome 6 Free";
+  font-weight: 900;
+  content: "\f075"; /* fa-comments */
+  color: #22c55e; /* hijau */
+}
+
+/* New hot thread (ada post kamu) */
+.thread_status.dot_newhotfolder::before {
+  font-family: "Font Awesome 6 Free";
+  font-weight: 900;
+  content: "\f06d"; /* fa-fire */
+  color: #f97316; /* oranye */
+}
+
+/* Thread closed baru (ada post kamu) */
+.thread_status.dot_newclosefolder::before,
+.thread_status.dot_newhotclosefolder::before {
+  font-family: "Font Awesome 6 Free";
+  font-weight: 900;
+  content: "\f023"; /* fa-lock */
+  color: #22c55e;
+}
+
+/* Thread normal */
+.thread_status.folder::before {
+  font-family: "Font Awesome 6 Free";
+  font-weight: 400;
+  content: "\f086"; /* fa-comment */
+  color: #9ca3af;
+}
+
+/* Hot thread */
+.thread_status.hotfolder::before {
+  font-family: "Font Awesome 6 Free";
+  font-weight: 900;
+  content: "\f06d"; /* fa-fire */
+  color: #ef4444;
+}
+
+/* Hot thread closed */
+.thread_status.hotclosefolder::before {
+  font-family: "Font Awesome 6 Free";
+  font-weight: 900;
+  content: "\f023"; /* fa-lock */
+  color: #ef4444;
+}
+
+/* Closed thread */
+.thread_status.closefolder::before {
+  font-family: "Font Awesome 6 Free";
+  font-weight: 900;
+  content: "\f023"; /* fa-lock */
+  color: #9ca3af;
+}
+
+/* Moved thread */
+.thread_status.movefolder::before {
+  font-family: "Font Awesome 6 Free";
+  font-weight: 900;
+  content: "\f061"; /* fa-arrow-right */
+  color: #3b82f6;
+}
+
+/* New thread */
+.thread_status.newfolder::before {
+  font-family: "Font Awesome 6 Free";
+  font-weight: 900;
+  content: "\f06d"; /* fa-comments */
+  color: #22c55e;
+}
+
+/* New hot thread */
+.thread_status.newhotfolder::before {
+  font-family: "Font Awesome 6 Free";
+  font-weight: 900;
+  content: "\f06d"; /* fa-fire */
+  color: #f97316;
+}
+
+/* New closed / hot closed thread */
+.thread_status.newhotclosefolder::before,
+.thread_status.newclosefolder::before {
+  font-family: "Font Awesome 6 Free";
+  font-weight: 900;
+  content: "\f023"; /* fa-lock */
+  color: #22c55e;
+}
+

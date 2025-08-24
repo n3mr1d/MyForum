@@ -1,0 +1,6 @@
+﻿
+if(CKEDITOR.status=='unloaded'){(function(){CKEDITOR.event.implementOn(CKEDITOR);CKEDITOR.loadFullCore=function(){if(CKEDITOR.status!='basic_ready'){CKEDITOR.loadFullCore._load=1;return;}
+delete CKEDITOR.loadFullCore;var script=document.createElement('script');script.type='text/javascript';script.src=CKEDITOR.basePath+'ckeditor.js';script.src=CKEDITOR.basePath+'ckeditor_source.js';document.getElementsByTagName('head')[0].appendChild(script);};CKEDITOR.loadFullCoreTimeout=0;CKEDITOR.add=function(editor){var pending=this._.pending||(this._.pending=[]);pending.push(editor);};(function(){var onload=function(){var loadFullCore=CKEDITOR.loadFullCore,loadFullCoreTimeout=CKEDITOR.loadFullCoreTimeout;if(!loadFullCore)
+return;CKEDITOR.status='basic_ready';if(loadFullCore&&loadFullCore._load)
+loadFullCore();else if(loadFullCoreTimeout){setTimeout(function(){if(CKEDITOR.loadFullCore)
+CKEDITOR.loadFullCore();},loadFullCoreTimeout*1000);}};CKEDITOR.domReady(onload);})();CKEDITOR.status='basic_loaded';})();}

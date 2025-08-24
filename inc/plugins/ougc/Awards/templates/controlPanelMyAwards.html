@@ -1,0 +1,33 @@
+<table border="0" cellspacing="{$theme['borderwidth']}" cellpadding="{$theme['tablespace']}" class="tborder">
+    <tr>
+        <td class="thead" colspan="{$rowColumnSpan}">
+            <strong>{$lang->ougcAwardsControlPanelMyAwardsTableTitle}</strong>
+        </td>
+    </tr>
+    <tr>
+        <td class="tcat smalltext" width="5%" align="center">
+            <strong>{$lang->ougcAwardsControlPanelMyAwardsTableAward}</strong>
+        </td>
+        <td class="tcat smalltext" width="15%"><strong>{$lang->ougcAwardsControlPanelMyAwardsTableName}</strong></td>
+        <td class="tcat smalltext"><strong>{$lang->ougcAwardsControlPanelMyAwardsTableReason}</strong></td>
+        <td class="tcat smalltext"><strong>{$lang->ougcAwardsControlPanelMyAwardsTableThread}</strong></td>
+        <td class="tcat smalltext" width="15%" align="center">
+            <strong>{$lang->ougcAwardsControlPanelMyAwardsTableDate}</strong>
+        </td>
+        {$displayOrderHeader}
+        <td class="tcat smalltext" width="5%" align="center">
+            <strong>{$lang->ougcAwardsControlPanelMyAwardsTableDisplay}</strong>
+        </td>
+        {$rowHeadColumnsExtra}
+    </tr>
+    {$grantedList}
+</table>
+<br/>
+<form action="{$formUrl}" method="post" id="controlPanelMyAwardsForm{$sectionID}"></form>
+<input type="hidden" name="action" value="myAwards" form="controlPanelMyAwardsForm{$sectionID}"/>
+<div align="center">
+    <input type="submit" class="button" value="{$lang->ougcAwardsControlPanelButtonUpdate}"
+           form="controlPanelMyAwardsForm{$sectionID}"/>
+</div>
+<br/>
+{$paginationMenu}

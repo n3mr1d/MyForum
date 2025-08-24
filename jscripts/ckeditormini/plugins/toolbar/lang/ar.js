@@ -1,0 +1,2 @@
+﻿
+CKEDITOR.plugins.setLang('toolbar','ar',{toolbarCollapse:'تقليص شريط الأدوت',toolbarExpand:'تمديد شريط الأدوات',toolbarGroups:{document:'مستند',clipboard:'الحافظة/الرجوع',editing:'تحرير',forms:'نماذج',basicstyles:'نمط بسيط',paragraph:'فقرة',links:'روابط',insert:'إدراج',styles:'أنماط',colors:'ألوان',tools:'أدوات'},toolbars:'أشرطة أدوات المحرر'});

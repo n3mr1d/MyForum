@@ -1,6 +1,6 @@
 <?php
 $l['icon_title'] = "Icon";
-$l['icon_desc'] = "Enter the icon URL or HTML for this forum here.";
+$l['icon_desc'] = "Enter the Font Awesome icon HTML for this forum here. For example: <i class='fa fa-comments'></i>";
 
 $l['forum_management'] = "Forum Management";
 $l['forum_management_desc'] = "This section allows you to manage the categories and forums on your board. You can manage forum permissions and forum-specific moderators as well. If you change the display order for one or more forums or categories, make sure you submit the form at the bottom of the page.";

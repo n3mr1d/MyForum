@@ -141,7 +141,7 @@ $config['disallowed_remote_addresses'] = array(
 	'172.16.0.0/12',
 	'192.168.0.0/16',
 );
-
+$config['debug'] = 1;
 /**
  * Admin CP Secret PIN
  *  If you wish to request a PIN

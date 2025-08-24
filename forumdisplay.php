@@ -155,6 +155,7 @@ $child_forums = build_forumbits($fid, 2);
 
 if(!empty($child_forums) && !empty($child_forums['forum_list']))
 {
+
 	$forums = $child_forums['forum_list'];
 	$lang->sub_forums_in = $lang->sprintf($lang->sub_forums_in, $foruminfo['name']);
 	eval("\$subforums = \"".$templates->get("forumdisplay_subforums")."\";");
@@ -1098,10 +1099,6 @@ if(!empty($threadcache) && is_array($threadcache))
 			$icon['path'] = htmlspecialchars_uni($icon['path']);
 			$icon['name'] = htmlspecialchars_uni($icon['name']);
 			eval("\$icon = \"".$templates->get("forumdisplay_thread_icon")."\";");
-		}
-		else
-		{
-			$icon = "&nbsp;";
 		}
 
 		$prefix = '';

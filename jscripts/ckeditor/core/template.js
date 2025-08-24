@@ -1,0 +1,3 @@
+﻿
+(function(){var cache={},rePlaceholder=/{([^}]+)}/g,reQuote=/'/g,reEscapableChars=/([\\'])/g,reNewLine=/\n/g,reCarriageReturn=/\r/g;CKEDITOR.template=function(source){if(cache[source])
+this.output=cache[source];else{var fn=source.replace(reEscapableChars,'\\$1').replace(reNewLine,'\\n').replace(reCarriageReturn,'\\r').replace(rePlaceholder,function(m,key){return"',data['"+key+"']==undefined?'{"+key+"}':data['"+key+"'],'";});fn="return buffer?buffer.push('"+fn+"'):['"+fn+"'].join('');";this.output=cache[source]=Function('data','buffer',fn);}};})();

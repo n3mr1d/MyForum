@@ -1,0 +1,6 @@
+﻿
+(function(){var loadedLangs={};CKEDITOR.lang={languages:{en:1,fa:1},rtl:{fa:1},load:function(languageCode,defaultLanguage,callback){if(!languageCode||!CKEDITOR.lang.languages[languageCode])
+languageCode=this.detect(defaultLanguage,languageCode);if(!this[languageCode]){CKEDITOR.scriptLoader.load(CKEDITOR.getUrl('lang/'+languageCode+'.js'),function(){this[languageCode].dir=this.rtl[languageCode]?'rtl':'ltr';callback(languageCode,this[languageCode]);},this);}else
+callback(languageCode,this[languageCode]);},detect:function(defaultLanguage,probeLanguage){var languages=this.languages;probeLanguage=probeLanguage||navigator.userLanguage||navigator.language||defaultLanguage;var parts=probeLanguage.toLowerCase().match(/([a-z]+)(?:-([a-z]+))?/),lang=parts[1],locale=parts[2];if(languages[lang+'-'+locale])
+lang=lang+'-'+locale;else if(!languages[lang])
+lang=null;CKEDITOR.lang.detect=lang?function(){return lang;}:function(defaultLanguage){return defaultLanguage;};return lang||defaultLanguage;}};})();

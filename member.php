@@ -2078,7 +2078,7 @@ if($mybb->input['action'] == "profile")
 	$lang->users_additional_info = $lang->sprintf($lang->users_additional_info, $memprofile['username']);
 	$lang->users_signature = $lang->sprintf($lang->users_signature, $memprofile['username']);
 	$lang->send_user_email = $lang->sprintf($lang->send_user_email, $memprofile['username']);
-
+  $lang->user_forum_static = $lang->sprintf($lang->user_forum_static, $memprofile['username']);
 	$useravatar = format_avatar($memprofile['avatar'], $memprofile['avatardimensions']);
 	eval("\$avatar = \"".$templates->get("member_profile_avatar")."\";");
 

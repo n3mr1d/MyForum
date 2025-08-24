@@ -17,15 +17,13 @@ require_once MYBB_ROOT . $config['admin_dir'] . '/inc/functions_themes.php';
 
 $stylesheets = $mybb->get_input('stylesheet', MyBB::INPUT_ARRAY);
 
-if(!empty($stylesheets))
-{
+if (!empty($stylesheets)) {
 	$stylesheet_list = implode(', ', array_map('intval', $stylesheets));
 
 	$content = '';
 	$prefix = TABLE_PREFIX;
 
-	switch($db->type)
-	{
+	switch ($db->type) {
 		case 'pgsql':
 		case 'sqlite':
 			$sql = <<<SQL
@@ -35,8 +33,7 @@ SELECT stylesheet FROM {$prefix}themestylesheets
 SQL;
 
 			$i = 0;
-			foreach($stylesheets as $sid)
-			{
+			foreach ($stylesheets as $sid) {
 				$sid = (int) $sid;
 
 				$sql .= "WHEN {$sid} THEN {$i}\n";
@@ -56,14 +53,12 @@ SQL;
 
 	$query = $db->query($sql);
 
-	while($row = $db->fetch_array($query))
-	{
+	while ($row = $db->fetch_array($query)) {
 		$stylesheet = $row['stylesheet'];
 
 		$plugins->run_hooks('css_start', $stylesheet);
 
-		if(!empty($mybb->settings['minifycss']))
-		{
+		if (!empty($mybb->settings['minifycss'])) {
 			$stylesheet = minify_stylesheet($stylesheet);
 		}
 
